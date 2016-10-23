@@ -11,3 +11,4 @@ contains server block which implements the port to listen and the location block
 Feature enchancements:
 1. Modify recipe with multiple conditional statements to achieve installation based on different platforms, with the help pf ohai attributes.
 2. Replace index.html in /usr/share/nginx/html/ with required html page.
+3. Create a template file nginx.conf.erb with the required settings( viz., port no etc).
