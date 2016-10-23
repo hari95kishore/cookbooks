@@ -14,4 +14,6 @@ Templates: redis.conf
 logfile <%= node[redis_log_location]> replaces the default attribute(defualt['redis_log_location']) value.
 
 Feature enhancements:
-
+1. Modify recipe with multiple conditional statements to achieve installation based on different platforms, with the help pf ohai attributes.
+2. Change locations of logfile, data directory and redis.conf file location by adding them in template file.
+3. Run commands with root user.
