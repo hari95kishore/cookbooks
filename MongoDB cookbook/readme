@@ -9,3 +9,4 @@ Usinf bash resource, mongodb shell is started and a DB named sampleapp is create
 Feature enhancements:
 1. By creating a template mongod.conf.erb, change the mongo db log directory if required.
 2. By default, mongodb starts automatically after starting the system, if not include mongodb in /etc/init.d
+3. Modify recipe with multiple conditional statements to achieve installation based on different platforms, with the help pf ohai attributes.
