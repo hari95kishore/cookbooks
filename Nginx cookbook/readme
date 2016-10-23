@@ -1,0 +1,13 @@
+Recipes: nginx_install
+
+package resource is used to install nginx by using symbol :install
+service package is used to start the nginx service
+update-rc.d nginx defaults is run inorder to set nginx to start automatically after restarting the system.
+template resource is used to copy the default.erb file present in Nginx cookbook/templates/ to /etc/nginx/sites-available/ 
+
+Templates: default.erb
+contains server block which implements the port to listen and the location block as per the requirement.
+
+Feature enchancements:
+1. Modify recipe with multiple conditional statements to achieve installation based on different platforms, with the help pf ohai attributes.
+2. Replace index.html in /usr/share/nginx/html/ with required html page.
