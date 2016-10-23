@@ -1,0 +1,12 @@
+Metadata.rb contains the info about the cookbook viz., name, maintainer, maintainer email,etc. It also contains depends nginx as the cookbook depends on nginx cookbook.
+
+Recipes: nodejs_install
+multiple packages installation is done using ['npm','nodejs'] package resource.
+bash resource is used to create a directory named testapp and cd to testapp.
+Using cookbook_file, test_application.js is being placed inside testapp directory in node machine.
+include_recipe 'nginx::nginx_install' performs the nginx_install recipe of nginx cookbook, which achieves installation of nginx and changing the server block in /etc/nginx/sites-avaialable/default file, which configures the nginx to listen to port 80 and redirect to the nodejs application server with port 5000
+
+Feature enhancements:
+1. Modify recipe with multiple conditional statements to achieve installation based on different platforms, with the help pf ohai attributes.
+2. By implementing various attributes, achieve nodejs installation through different ways like, package installation or source installation.
+
