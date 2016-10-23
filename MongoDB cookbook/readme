@@ -1,0 +1,11 @@
+Attributes:
+default['cwd'] attribute contains the loation path from where the command should be run.
+
+Recipes: mongodb_install
+bash resource is used to import the key and cache the update
+package resource is to install mongodb-org
+Usinf bash resource, mongodb shell is started and a DB named sampleapp is created.
+
+Feature enhancements:
+1. By creating a template mongod.conf.erb, change the mongo db log directory if required.
+2. By default, mongodb starts automatically after starting the system, if not include mongodb in /etc/init.d
