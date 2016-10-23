@@ -1,0 +1,6 @@
+name              "nodejs"
+maintainer        "Hari kishore"
+maintainer_email  "hari95kishore@gmail.com"
+description       "Installs nodejs"
+version           "1.0.0"
+depends           "nginx"
