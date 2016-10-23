@@ -1,6 +1,6 @@
 execute 'apt-get update' do
   command 'apt-get update'
-done
+end
 
 package ['npm', 'nodejs'] do
   action :install
@@ -21,7 +21,7 @@ cookbook_file '/home/ubuntu/testapp' do
   action :create
 end
 
-include_recipe 'nginx::nginx'
+include_recipe 'nginx::nginx_install'
 
 bash 'start the nodejs application' do
   cwd "#{cwd}"
