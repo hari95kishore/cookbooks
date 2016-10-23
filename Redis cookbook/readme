@@ -1,0 +1,17 @@
+Attributes: default.rb
+default['redis_url'] is used to specify the download link.
+default['redis_file_location'] contains the location of the downloaded redis-stable.tar.gz
+default['redis_filename'] is the name of the downloaded file.
+defualt['redis_log_location'] is the log file location.
+
+Recipes: redis_install
+Multiple packages installation ['build-essential','make'] using package resource as we are installing redis from source.
+remote_file resource is used to get the redis-stable.tar.gz file from a remote location(default['redis_url'])
+bash resource is used to run the script which extract the file, make and make install redis.
+template resource place redis.conf.erb file present in templates/ directory in /etc/redis/ directory in node machine.
+
+Templates: redis.conf
+logfile <%= node[redis_log_location]> replaces the default attribute(defualt['redis_log_location']) value.
+
+Feature enhancements:
+
