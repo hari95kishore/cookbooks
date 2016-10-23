@@ -1,0 +1,1 @@
+default['cwd'] = "/home/ubuntu"
